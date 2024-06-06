@@ -1,9 +1,10 @@
-import { Typography } from '@mui/material';
+import { RouterProvider } from 'react-router-dom';
+import { router } from './routes/AppRouter';
 
 export const CalendarApp = () => {
   return (
     <>
-      <Typography variant="body2">Entry point</Typography>
+      <RouterProvider router={router} />
     </>
   );
 };
