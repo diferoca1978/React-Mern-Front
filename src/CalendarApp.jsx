@@ -1,7 +1,9 @@
+import { Typography } from '@mui/material';
+
 export const CalendarApp = () => {
   return (
     <>
-      <h1 className="text-9xl">Entry point</h1>
+      <Typography variant="body2">Entry point</Typography>
     </>
   );
 };
