@@ -10,18 +10,23 @@ export const FormsLayout = ({ children, title = '' }) => {
       direction="column"
       alignItems="center"
       justifyContent="center"
-      sx={{ minHeight: '100vh', backgroundColor: 'primary.light', padding: 4 }}
+      sx={{
+        minHeight: '100vh',
+        backgroundColor: 'primary.main',
+        padding: 4,
+      }}
     >
       <Grid
         item
+        className="box-shadow"
         xs={3}
         sx={{
-          backgroundColor: 'white',
+          backgroundColor: 'primary.light',
           padding: 3,
           borderRadius: 4,
-          border: 1,
-          borderColor: 'blues.main',
-          width: { md: 450 },
+          border: 2,
+          borderColor: 'secondary.main',
+          width: { md: 550 },
         }}
       >
         <Typography variant="h5">{title}</Typography>
