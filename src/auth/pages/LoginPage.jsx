@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link as RouterLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import {
   Button,
   Grid,
@@ -97,7 +97,7 @@ export const LoginPage = () => {
 
                 <Grid container direction="row" justifyContent="end" sm={12}>
                   <Link
-                    component={RouterLink}
+                    component={NavLink}
                     color="inherit"
                     to="/auth/register"
                     sx={{

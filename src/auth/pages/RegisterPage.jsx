@@ -8,7 +8,7 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { FormsLayout } from '../../layout';
 import { useForm } from 'react-hook-form';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
@@ -89,9 +89,9 @@ export const RegisterPage = () => {
 
                 <Grid container direction="row" justifyContent="end" sm={12}>
                   <Link
-                    component={RouterLink}
+                    component={NavLink}
                     color="inherit"
-                    to="/auth/register"
+                    to="/auth/login"
                     sx={{
                       fontSize: 16,
                       textDecoration: 'none',
