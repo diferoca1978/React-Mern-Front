@@ -35,25 +35,12 @@ const style = {
 export const CalendarModal = () => {
   const [open, setOpen] = useState(true);
   const [formSubmitted, setFormSubmitted] = useState(false);
-
-  const handleClose = () => {
-    console.log('Closing');
-    setOpen(false);
-  };
-
   const [formValues, setFormValues] = useState({
     title: '',
     task: '',
     start: new Date(),
     end: addHours(new Date(), 2),
   });
-
-  const onChangeDate = (event, changing) => {
-    setFormValues({
-      ...formValues,
-      [changing]: event,
-    });
-  };
 
   const isValidTitle = useMemo(() => {
     if (!formSubmitted) return '';
@@ -66,6 +53,18 @@ export const CalendarModal = () => {
       ...formValues,
       [target.name]: target.value,
     });
+  };
+
+  const onChangeDate = (event, changing) => {
+    setFormValues({
+      ...formValues,
+      [changing]: event,
+    });
+  };
+
+  const handleClose = () => {
+    console.log('Closing');
+    setOpen(false);
   };
 
   const handleSubmit = (event) => {
@@ -155,7 +154,7 @@ export const CalendarModal = () => {
                     value={formValues.title}
                     onChange={onChangeValues}
                     sx={{ width: 320 }}
-                    error={isValidTitle ? 'true' : ''}
+                    error={!!isValidTitle}
                     helperText={isValidTitle && 'Title is required'}
                   ></TextField>
                 </Grid>
